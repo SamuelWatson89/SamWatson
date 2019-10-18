@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        />
-        <title>Sam Watson - Full Stack Web Developer</title>
-    </head>
 
-    <body>
-        <style>
-            :root {
-                --black: #222;
-                --white: #eee;
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <title>Sam Watson - Full Stack Web Developer</title>
+</head>
 
-            body {
-                font-family: "Lucida Sans", "Lucida Sans Regular",
-                    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
-                    sans-serif;
-                color: --var(black);
-                background-color: --var(white);
-                font-size: 10px;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
-            }
+<body>
+    <style>
+        :root {
+            --black: #222;
+            --white: #eee;
+            --primary: #23d2e2;
+        }
 
-            main {
-                display: -ms-grid;
-                display: grid;
-                width: 100vw;
-                height: 100vh;
-                -ms-flex-line-pack: center;
-                align-content: center;
-                justify-items: center;
-            }
+        body {
+            font-family: "Lucida Sans", "Lucida Sans Regular",
+                "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+                sans-serif;
+            color: --var(black);
+            background-color: --var(white);
+            font-size: 10px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
 
-            h1 {
-                font-size: 5rem;
-                text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
-            }
-        </style>
+        main {
+            display: -ms-grid;
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            justify-items: center;
+        }
 
-        <main>
+        .box {
+            background: --var(primary);
+            display: -ms-grid;
+            display: grid;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            justify-items: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+            text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+
+    <main>
+        <div class="box">
             <h1>SOON.</h1>
             <p>Sam Watson</p>
             <p>
-                <span
-                    ><a href="https://github.com/SamuelWatson89" target="_blank"
-                        ><img
-                            src="img/GitHub-Mark-120px-plus.png"
-                            alt="GitHub"
-                            width="30"/></a
-                ></span>
+                <span><a href="https://github.com/SamuelWatson89" target="_blank"><img src="img/GitHub-Mark-120px-plus.png"
+                            alt="GitHub" width="30" /></a></span>
             </p>
-        </main>
-    </body>
+        </div>
+    </main>
+</body>
+
 </html>
