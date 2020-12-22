@@ -1,0 +1,11 @@
+.icon {
+  margin-top: 0px;
+  -webkit-transition: margin-top 0.2s ease-out;
+  -moz-transition: margin-top 0.2s ease-out;
+  -o-transition: margin-top 0.2s ease-out;
+  transition: margin-top 0.2s ease-out;
+}
+
+.icon:hover {
+  margin-top: -5px;
+}
