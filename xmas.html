@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Chirstmas list!</title>
+</head>
+
+<body class="blue-grey darken-4">
+    <div class="container" id="app">
+        <div class="row">
+            <div class="col s12 mt60">
+                <h1 class="deep-orange-text accent-3">Sam's Xmas list!</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <div v-for="gift in gifts" :key="gift.name" class=" row blue-grey lighten-5 z-depth-3 mt20 pb10 pt10">
+                    <div class="col s12 m3">
+                        <img :src="'/img/' + gift.image" class="responsive-img">
+                    </div>
+
+                    <div class="col s12 m9 p10">
+                        <h3>{{gift.name}}<br>
+                            <small>£{{ gift.price }}</small>
+                        </h3>
+
+                        <p>{{gift.category}}</p>
+
+                        <p v-if="gift.extraInfo">
+                            {{gift.extraInfo}}
+                        </p>
+
+                        <a :href="gift.link" class="waves-effect waves-light btn deep-orange accent-3">Shop at
+                            {{gift.linkText}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                gifts: [
+                    {
+                        image: 'mechanix_impact_coyote.jpg',
+                        name: 'MECHANIX WEAR M-PACT GLOVES COYOTE',
+                        price: '29.95',
+                        category: 'Airsoft',
+                        link: 'https://www.military1st.co.uk/mpt-72-mechanix-wear-m-pact-gloves-coyote.html',
+                        linkText: 'Military 1st',
+                        extraInfo: 'Size: Large'
+                    },
+                    {
+                        image: 'socks.jpg',
+                        name: 'Cushioned Sole Socks',
+                        price: '14.00',
+                        category: 'Life and comfort',
+                        link: 'https://www.next.co.uk/style/st015782/148970#148970/',
+                        linkText: 'Next',
+                        extraInfo: 'colours similar to the image'
+                    },
+                    {
+                        image: 'slippers.jpg',
+                        name: 'Slippers',
+                        price: '15.00',
+                        category: 'Cosy toes!',
+                        link: 'https://www.marksandspencer.com/slip-on-moccasin-slippers-with-thermowarmth/p/clp60227732?color=DARKBLUEMIX#intid=prodColourId-60453020',
+                        linkText: 'M&S',
+                        extraInfo: 'Any slippers in this sort of style is fine. does not need to be these exact ones.'
+                    },
+                    {
+                        image: 'the_one.jpg',
+                        name: 'The One Moscatel Cask Finish',
+                        price: '43.95',
+                        category: 'Drinking & Sanity!',
+                        link: 'https://www.thewhiskyexchange.com/p/59844/the-one-moscatel-cask-finish',
+                        linkText: 'Whiskey Exchange',
+                        extraInfo: 'I have not looked for a cheaper price.'
+                    },
+                    {
+                        image: 'filey_bay_flagship.jpg',
+                        name: 'The One Moscatel Cask Finish',
+                        price: '52.95',
+                        category: '... It is delicious',
+                        link: 'https://www.thewhiskyexchange.com/p/57590/filey-bay-flagship',
+                        linkText: 'Whiskey Exchange',
+                        extraInfo: 'I have not looked for a cheaper price.'
+                    },
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>
