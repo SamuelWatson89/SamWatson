@@ -23,7 +23,8 @@
             <div class="col s12">
                 <div v-for="gift in gifts" :key="gift.name" class=" row blue-grey lighten-5 z-depth-3 mt20 pb10 pt10">
                     <div class="col s8 m3 push-s2">
-                        <img :src="'/img/' + gift.image" class="responsive-img">
+                        <img v-if="gift.image" :src="'/img/' + gift.image" class="responsive-img">
+                        <h3 v-else>No Image &#127774;</h3>
                     </div>
 
                     <div class="col s12 m9 p10">
@@ -37,7 +38,7 @@
                             {{gift.extraInfo}}
                         </p>
 
-                        <a :href="gift.link" class="waves-effect waves-light btn deep-orange accent-3"
+                        <a v-if="gift.link" :href="gift.link" class="waves-effect waves-light btn deep-orange accent-3"
                             target="_blank">Shop at
                             {{gift.linkText}}</a>
                     </div>
@@ -72,7 +73,7 @@
                         category: 'Life and comfort',
                         link: 'https://www.next.co.uk/style/st015782/148970#148970/',
                         linkText: 'Next',
-                        extraInfo: 'colours similar to the image'
+                        extraInfo: 'Colours similar to the image'
                     },
                     {
                         image: 'slippers.jpg',
@@ -117,7 +118,34 @@
                         category: 'PC Parts',
                         link: 'https://www.overclockers.co.uk/phanteks-extension-cable-combo-kit-orange-cm-027-pt.html',
                         linkText: 'Overclockers',
-                        extraInfo: 'Everyone PC runs better when its got some coloured cables... right.'
+                        extraInfo: 'Everyones PC runs better when its got some coloured cables... right.'
+                    },
+                    {
+                        image: 'mad_squirrel_pastry_pack.png',
+                        name: 'Mad Squirrel Pastry Pack',
+                        price: '25.00',
+                        category: 'Beer',
+                        link: 'https://www.madsquirrelbrew.co.uk/item/211/madsquirrel/Pastry-Pack.html',
+                        linkText: 'Mad Squirrel',
+                        extraInfo: 'Tasty, and a glass!'
+                    },
+                    {
+                        image: 'dressing_gown.jpg',
+                        name: 'Dressing Gown',
+                        price: '29.50',
+                        category: 'Clothing',
+                        link: 'https://www.marksandspencer.com/fleece-dressing-gown/p/clp60510742?color=BOTTLEGREEN#intid=prodColourId-60510742',
+                        linkText: 'M&S',
+                        extraInfo: 'This is a nice colour, something different. Doesnt have to be this exact one, or from M&S.'
+                    },
+                    {
+                        image: '',
+                        name: 'Pyjamas',
+                        price: '0.00',
+                        category: 'Clothing',
+                        link: '',
+                        linkText: '',
+                        extraInfo: 'Not seen any specific.. maybe some cotton trouser bottoms...? Why so expensive?!!?'
                     },
                 ]
             }
